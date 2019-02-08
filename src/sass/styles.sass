@@ -1,0 +1,369 @@
+@import "base"
+@import "fonts"
+@import "libs"
+@import "vars"
+
+
+// Пользовательские стили
+.grid
+  display: grid
+.styckyrel
+  position: relative
+.main-header
+  min-height: 100vh
+  background-size: cover
+  background-position: center
+  position: relative
+  align-content: center
+  &::before
+    content: ''
+    position: absolute
+    top: 0
+    left: 0
+    right: 0
+    bottom: 0
+    background-color: $dark
+    opacity: .80
+
+.header-content
+  z-index: 1
+  color: #fff
+  text-align: center
+  padding: 60px $gutter
+  -webkit-font-smoothing: antialiased
+  .tokens
+    color: $accent
+  img
+    align: center
+    align-content: center
+    margin: auto
+    margin-bottom: 40px
+  h1
+    font-size: 68px
+    font-family: open-sans, sans-serif
+    font-weight: bold
+    margin: 10px 0
+    line-height: 1.5
+    letter-spacing: .5px
+  p
+    font-size: 25px
+    font-weight: 300
+    color: $light
+    padding-bottom: 70px
+
+.topblock
+  transition: background-color .1s ease
+  grid-template-columns: repeat(2, 1fr)
+  position: -webkit-sticky
+  position: sticky
+  top: 0
+  height: 100px
+  margin-top: -100px
+  margin-bottom: 0px
+  align-content: center
+  .logoblock
+    margin-left: 50px
+    visibility: hidden
+  nav
+    position: relative
+    text-align: right
+    font-family: open-sans
+    font-weight: bold
+    letter-spacing: .12em
+    font-size: 13px
+    align-content: center
+    margin-top: 15px
+    a
+      text-decoration: none
+      color: $light
+    .menu-main
+      a:hover
+        color: $accent
+        transition: color .3s ease
+
+.stack
+  background-color: #fff
+  transition: background-color .2s ease
+  grid-template-columns: repeat(2, 1fr)
+  position: -webkit-sticky
+  position: sticky
+  box-shadow: rgba(0,0,0,.13) 0 4px 16px
+  top: 0
+  height: 100px
+  margin-top: -100px
+  margin-bottom: 0px
+  align-content: center
+  z-index: 101
+  .logoblock
+    margin-left: 50px
+    visibility: visible
+  nav
+    position: relative
+    text-align: right
+    font-family: open-sans
+    font-weight: bold
+    font-size: 13px
+    letter-spacing: .12em
+    align-content: center
+    margin-top: 15px
+    a
+      text-decoration: none
+      color: $dark
+    .menu-main
+      a:hover
+        color: $accent
+        transition: color .3s ease
+      .active
+        color: $accent
+        transition: color .2s ease
+.menu-main
+  text-align: right
+  display: inline-block
+  margin-right: 50px
+  li
+    display: inline-block
+    list-style-type: none
+    padding: 0 15px
+.menu-lang
+  text-align: right
+  display: inline-block
+  margin-right: 50px
+  font-weight: 300
+  li
+    list-style-type: none
+
+
+.services
+  align-content: center
+  text-align: center
+  background-color: $accentdark
+  margin-top: -20px
+  font-family: open-sans, sans-serif
+  font-weight: 300
+  -webkit-font-smoothing: antialiased
+  color: #fff
+  .container
+    padding-top: 100px
+    padding-bottom: 90px
+    box-sizing: content-box;
+    width: 960px
+    h2
+      font-size: 42px
+      font-weight: 300
+    p
+      line-height: 1.45
+      letter-spacing: .45
+      font-size: 30px
+      margin-bottom: 40px
+
+.threereasons
+  font-family: open-sans, sans-serif
+  text-align: center
+  -webkit-font-smoothing: antialiased
+  align-content: center
+  padding-top: 100px
+  padding-bottom: 100px
+  h2
+      font-size: 42px
+      color: $darktext
+      line-height: 1.23
+  span
+    font-size: 24px
+    font-weight: 300
+    line-height: 1.5
+.reasons
+  margin: 100px auto
+  grid-template-columns: repeat(3, 1fr)
+  grind-gap: $gutter
+  width: 1200px
+.reasondiv
+  width: 310px
+  margin: 0 auto
+.reasonimg
+  background-size: cover
+  margin: auto
+  background-position: center
+  width: 120px
+  height: 120px
+.reasontitle
+  font-weight: bold
+  font-size: 24px
+  color: #000
+.reasontext
+  margin-top: 20px
+  p
+    -webkit-font-smoothing: antialiased
+    font-weight: 300
+    font-size: 18px
+
+
+.ourteam
+  background-color: $lighter
+  text-align: center
+  align-content: center
+  font-family: open-sans, sans-serif
+  padding-top: 100px
+  padding-bottom: 80px
+  h2
+    font-size: 30px
+.team
+  -webkit-font-smoothing: antialiased
+  grid-template-columns: repeat(4, 1fr)
+  width: 1200px
+  text-align: center
+  align-content: center
+  margin: 100px auto
+.member
+  width: 200px
+  text-align: center
+  margin: auto
+  .photo
+    width: 200px
+    height: 200px
+    border-radius: 100px 100px
+    background-size: cover
+    background-position: center
+.name
+  font-size: 22px
+  font-weight: bold
+  margin-top: 20px
+.stat
+  color: #7a7a7a
+  font-size: 14px
+  font-weight: 300
+
+.button
+	display: inline-block
+	border: none
+	color: #fff
+	text-decoration: none
+	background-color: $accentdark
+	padding: 15px 60px
+	font-size: 16px
+	font-weight: bold
+	border-radius: 27.5px 27.5px
+	text-align: center
+	position: relative
+	outline: none
+	transition: background-color .1s ease
+	cursor: pointer
+	
+	&:focus, &:hover
+		text-decoration: none
+		color: #fff
+	&:hover
+		background-color: lighten($accentdark, 5%)
+		&::after
+			opacity: .22
+	&:active
+		background-color: darken($accentdark, 5%)
+		&::after
+			opacity: .32
+
+  &.but-gray
+    background-color: $gray
+    &::after
+      background-color: darken($gray, 15%)
+    &:hover
+      background-color: lighten($gray, 5%)
+      &::after
+        opacity: .22
+    &:active
+      background-color: darken($gray, 5%)
+      &::after
+        opacity: .32
+
+
+.buttoncase
+  grid-column: 1 / 5
+  padding: $gutter $gutter 50px
+
+.container
+  max-width: 1200px
+  margin: auto
+  padding: 0 $gutter
+
+
+.main-footer
+  padding-top: 100px
+  padding-bottom: 120px
+  background-color: darken($dark, 8%)
+  text-align: center
+  color: #fff
+  font-family: open-sans, sans-serif
+  -webkit-font-smoothing: antialiased
+.sociallinks
+  margin: auto
+  grid-template-columns: repeat(3, 1fr)
+  width: 169px
+  margin-bottom: 20px
+.sociallinks__item
+  width: 48px
+  height: 48px
+  padding: 0px
+.genenq
+  font-size: 26px
+  font-weight: bold
+  margin-bottom: 15px
+.mail
+  font-weight: 300
+  font-size: 18px
+  a
+    text-decoration: none
+    color: $accent
+  a:hover
+      color: $accentdark
+
+
+.menu__icon 
+    display: none
+    width: 40px
+    height: 30px
+    position: relative
+    cursor: pointer
+
+.menu__icon span
+    display: block
+    position: absolute
+    height: 5px
+    width: 100%
+    background: #333333
+    border-radius: 9px
+    opacity: 1
+    left: 0
+    transform: rotate(0deg)
+    transition: .25s ease-in-out
+
+.menu__icon span:nth-child(1)
+    top: 0px
+
+.menu__icon span:nth-child(2), .menu__icon span:nth-child(3)
+    top: 11px
+
+.menu__icon span:nth-child(4)
+    top: 22px
+
+.menu-top
+  .menu_state_open 
+    .menu__icon span:nth-child(1)
+      top: 18px
+      width: 0%
+      left: 50%
+
+.menu_state_open 
+  .menu__icon 
+    span:nth-child(1)
+      top: 18px
+      width: 0%
+      left: 50%
+    span:nth-child(2)
+      transform: rotate(45deg)
+    span:nth-child(3)
+      transform: rotate(-45deg)
+    span:nth-child(4)
+      top: 18px
+      width: 0%
+      left: 50%
+
+
+@import "media"
